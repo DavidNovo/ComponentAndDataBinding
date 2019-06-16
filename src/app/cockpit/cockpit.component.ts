@@ -20,6 +20,7 @@ export class CockpitComponent implements OnInit {
   constructor() {
   }
 
+  /* a lifecycle hook */
   ngOnInit() {
   }
 
