@@ -11,6 +11,8 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
@@ -32,8 +34,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngOnInit() {
     console.log('ngOnInit called');
-    console.log('ngOnInit.Text content=> ' + this.header.nativeElement.textContent);
-    //console.log('ngOnInit.paragraph content=> ' + this.contentParagraph.nativeElement.textContent);
+    console.log('ngOnInit Text content=> ' + this.header.nativeElement.textContent);
+    console.log('ngOnInit Paragraph content=> ' + this.paragraph.nativeElement.textContent);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -46,13 +48,14 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   }
 
   ngAfterContentInit(): void {
-    console.log('ngAfterContentInit called');
-    //console.log('ngAfterContentInit.paragraph content=> ' + this.contentParagraph.nativeElement.textContent);
+    console.log('ngAfterViewInit Text content=> ' + this.header.nativeElement.textContent);
+    console.log('ngAfterContentInit Paragraph content=> ' + this.paragraph.nativeElement.textContent);
 
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit called');
-    console.log('ngAfterViewInit.Text content=> ' + this.header.nativeElement.textContent);
+    console.log('ngAfterViewInit Text content=> ' + this.header.nativeElement.textContent);
+    console.log('ngAfterViewInit Paragraph content=> ' + this.paragraph.nativeElement.textContent);
+
   }
 }
